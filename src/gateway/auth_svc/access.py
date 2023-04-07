@@ -10,7 +10,7 @@ def login(request):
             auth = basicAuth
             )
 
-    if response.ststus_code == 200:
+    if response.status_code == 200:
         return response.txt , None
     else:
         return None , (response.txt, response.status_code)
